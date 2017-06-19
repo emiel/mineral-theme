@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="site-content">
+
+<h2>Latest writing</h2>
+
+<!-- limit to 4/5 articles -->
+{% for article in articles_page.object_list %}
+  <article>
+    <hgroup>
+      <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+      <time datetime="{{ article.date.isoformat() }}">{{ article.date.isoformat() }}</time>
+    </hgroup>
+    <div class="excerpt">{{ article.summary }}</div>
+  </article>
+{% endfor %}
+
+<h2>Latest projects</h2>
+
+<p>TBD</p>
+
+</section>
+{% endblock content %}
