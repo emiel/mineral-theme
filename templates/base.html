@@ -5,7 +5,7 @@
   <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
   {% block stylesheets %}
   <!-- XXX CSS hash -->
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}">
   {% endblock stylesheets %}
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -38,6 +38,7 @@
         {% endfor %}
       {% endif %}
     {% endif %}
+        <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}">Archives</span></a></li>
       </ul>
     </nav>
   </header>
