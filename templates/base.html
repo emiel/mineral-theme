@@ -12,44 +12,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% endblock head %}
 </head>
-<body>
 
-<div class="site-grid">
+<body class="site-grid">
 
-  <header class="site-header">
-    <hgroup class="site-hgroup">
-      <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-      <strong>{% if SITESUBTITLE %} {{ SITESUBTITLE }} {% endif %}</strong>
-    </hgroup>
+<header class="site-header">
+  <hgroup class="site-hgroup">
+    <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+    <strong>{% if SITESUBTITLE %} {{ SITESUBTITLE }} {% endif %}</strong>
+  </hgroup>
 
-    <nav class="site-nav">
-      <ul>
-    {% for title, link in MENUITEMS %}
-        <li><a href="{{ link }}">{{ title }}</a></li>
+  <nav class="site-nav">
+    <ul>
+  {% for title, link in MENUITEMS %}
+      <li><a href="{{ link }}">{{ title }}</a></li>
+  {% endfor %}
+  {% if DISPLAY_PAGES_ON_MENU %}
+    {% for p in pages %}
+      <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
     {% endfor %}
-    {% if DISPLAY_PAGES_ON_MENU %}
-      {% for p in pages %}
-        <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+  {% else %}
+    {% if DISPLAY_CATEGORIES_ON_MENU %}
+      {% for cat, null in categories %}
+        <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
       {% endfor %}
-    {% else %}
-      {% if DISPLAY_CATEGORIES_ON_MENU %}
-        {% for cat, null in categories %}
-          <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-        {% endfor %}
-      {% endif %}
     {% endif %}
-        <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}">Archives</span></a></li>
-      </ul>
-    </nav>
-  </header>
+  {% endif %}
+      <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}">Archives</span></a></li>
+    </ul>
+  </nav>
+</header>
 
-  {% block content %}{% endblock %}
+<section class="site-content">
+{% block content %}{% endblock %}
+</section>
 
-  <footer class="site-footer">
-    &copy; Copyright
-  </footer>
-
-</div>
+<footer class="site-footer">
+{% block footer %}
+  &copy; Copyright
+{% endblock %}
+</footer>
 
 {% block script %}{% endblock %}
 
