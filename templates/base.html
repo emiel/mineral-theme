@@ -4,7 +4,6 @@
   {% block head %}
   <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
   {% block stylesheets %}
-  <!-- XXX CSS hash -->
   <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}">
   {% endblock stylesheets %}
   <meta charset="utf-8">
@@ -18,7 +17,7 @@
 <header class="site-header">
   <hgroup class="site-hgroup">
     <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-    <strong>{% if SITESUBTITLE %} {{ SITESUBTITLE }} {% endif %}</strong>
+    <h2>{% if SITESUBTITLE %} {{ SITESUBTITLE }} {% endif %}</h2>
   </hgroup>
 
   <nav class="site-nav">
@@ -37,7 +36,7 @@
       {% endfor %}
     {% endif %}
   {% endif %}
-      <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}">Archives</span></a></li>
+      <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}">Archives</a></li>
     </ul>
   </nav>
 </header>
@@ -48,7 +47,7 @@
 
 <footer class="site-footer">
 {% block footer %}
-  &copy; Copyright
+  &copy; Emiel van de Laar, 2017
 {% endblock %}
 </footer>
 

@@ -15,7 +15,9 @@
   <header>
     <hgroup>
       <h1 class="article-title">{{ article.title }}</h1>
-      <span class="article-date">{{ article.locale_date }}</span>
+      <h2 class="article-date">
+        <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+      </h2>
     </hgroup>
   </header>
 

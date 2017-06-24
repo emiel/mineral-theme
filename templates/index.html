@@ -8,7 +8,7 @@
   <article>
     <hgroup>
       <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
-      <time datetime="{{ article.date.isoformat() }}">{{ article.date.isoformat() }}</time>
+      <h3><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time></h3>
     </hgroup>
     <div class="excerpt">{{ article.summary }}</div>
   </article>
