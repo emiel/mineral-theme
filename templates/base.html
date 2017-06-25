@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
-  {% block head %}
+{% block htmlhead %}
   <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
   {% block stylesheets %}
   <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}">
@@ -9,7 +9,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% endblock head %}
+{% endblock htmlhead %}
 </head>
 
 <body class="site-grid">

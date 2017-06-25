@@ -79,3 +79,10 @@ ul, li {
   margin: 0;
   padding: 0;
 }
+
+.higlight pre {
+  white-space: pre-wrap;
+  /*overflow-x: auto;*/
+  word-break: break-all;
+  word-wrap: break-word;
+}
