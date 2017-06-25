@@ -75,14 +75,8 @@ body {
   grid-area: site-footer;
 }
 
-ul, li {
-  margin: 0;
-  padding: 0;
-}
-
-.higlight pre {
+.highlight pre {
   white-space: pre-wrap;
-  /*overflow-x: auto;*/
   word-break: break-all;
   word-wrap: break-word;
 }
