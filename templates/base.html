@@ -15,10 +15,10 @@
 <body class="site-grid">
 
 <header class="site-header">
-  <hgroup class="site-hgroup">
-    <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-    <h2>{% if SITESUBTITLE %} {{ SITESUBTITLE }} {% endif %}</h2>
-  </hgroup>
+  <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+{% if SITESUBTITLE %}
+  <span class="subtitle">{{ SITESUBTITLE }}</span>
+{% endif %}
 
   <nav class="site-nav">
     <ul>
@@ -41,9 +41,9 @@
   </nav>
 </header>
 
-<section class="site-content">
+<div class="site-content">
 {% block content %}{% endblock %}
-</section>
+</div>
 
 <footer class="site-footer">
 {% block footer %}

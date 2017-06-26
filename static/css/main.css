@@ -90,3 +90,7 @@ tt.literal {
   word-wrap: break-word;
   word-break: break-all;
 }
+
+blockquote {
+  font-style: oblique;
+}

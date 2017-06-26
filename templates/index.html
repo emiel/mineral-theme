@@ -6,11 +6,14 @@
 <!-- limit to 4/5 articles -->
 {% for article in articles_page.object_list %}
   <article>
-    <hgroup>
+    <header>
       <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
-      <h3><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time></h3>
-    </hgroup>
-    <div class="excerpt">{{ article.summary }}</div>
+      <time class="article-date" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+    </header>
+
+    <div class="excerpt">
+      {{ article.summary }}
+    </div>
   </article>
 {% endfor %}
 
