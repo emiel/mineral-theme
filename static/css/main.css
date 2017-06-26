@@ -75,8 +75,18 @@ body {
   grid-area: site-footer;
 }
 
+/* Wrapping */
+
 .highlight pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
+  background-color: #fff6f0;
+  padding: 0.2em;
+}
+
+tt.literal {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
 }
