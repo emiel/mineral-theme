@@ -59,16 +59,34 @@ body {
   display: inline;
 }
 
+/* Site footer */
+
+.site-footer {
+  grid-area: site-footer;
+}
+
 /* Site content */
 
 .site-content {
   grid-area: site-content;
 }
 
-/* Site footer */
+.site-content blockquote {
+  font-style: oblique;
+}
 
-.site-footer {
-  grid-area: site-footer;
+.site-content h1,h2,h3,h4,h5,h6 {
+  margin-top: 1em;
+  margin-bottom: 0em;
+}
+
+.site-content h1+p,
+.site-content h2+p,
+.site-content h3+p,
+.site-content h4+p,
+.site-content h5+p,
+.site-content h6+p {
+  margin-top: 0.2em;
 }
 
 /* Wrapping */
@@ -85,8 +103,4 @@ tt.literal {
   white-space: pre-wrap;
   word-wrap: break-word;
   word-break: break-all;
-}
-
-blockquote {
-  font-style: oblique;
 }
