@@ -39,15 +39,7 @@ body {
   grid-area: site-header;
 }
 
-.site-hgroup h1 {
-  margin: 0;
-  font-weight: normal;
-}
-
 /* Site navigation */
-
-.site-nav {
-}
 
 .site-nav ul {
   list-style: none;

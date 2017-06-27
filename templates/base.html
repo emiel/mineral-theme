@@ -51,7 +51,9 @@
 {% endblock %}
 </footer>
 
-{% block script %}{% endblock %}
-
+{% block htmlscript %}{% endblock %}
+{% if GOOGLE_ANALYTICS_TRACKING_ID %}
+{% include "_google_analytics.html" %}
+{% endif %}
 </body>
 </html>
