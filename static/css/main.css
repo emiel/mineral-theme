@@ -96,3 +96,18 @@ tt.literal {
   word-wrap: break-word;
   word-break: break-all;
 }
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.site-footer ul {
+  margin: 0;
+}
+
+.site-footer li {
+  display: inline-block;
+}
