@@ -42,19 +42,12 @@ body {
 /* Site navigation */
 
 .site-nav ul {
-  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.site-nav ul li {
-  display: inline;
-}
-
-/* Site footer */
-
-.site-footer {
-  grid-area: site-footer;
+.site-nav li {
+  display: inline-block;
 }
 
 /* Site content */
@@ -97,17 +90,29 @@ tt.literal {
   word-break: break-all;
 }
 
+/* Site footer */
+
 .site-footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 1em;
+  grid-area: site-footer;
+  margin: 0 auto;
 }
 
 .site-footer ul {
   margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .site-footer li {
   display: inline-block;
+}
+
+.site-footer li:not(:first-child):before {
+  content: "◊";
+  padding-right: 0.3em;
+}
+
+.site-footer .copyright {
+  padding: 0.5em;
+  margin: 0;
 }

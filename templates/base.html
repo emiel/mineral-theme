@@ -49,12 +49,12 @@
 
 <footer class="site-footer">
 {% block footer %}
-  <span class="copyright">&copy; 2017 Emiel van de Laar</span>
   <ul>
   {% for link_name, link_url in SOCIAL %}
     <li><a href="{{ link_url }}">{{ link_name }}</a></li>
   {% endfor %}
   </ul>
+  <p class="copyright">&copy; 2017 Emiel van de Laar</p>
 {% endblock %}
 </footer>
 
