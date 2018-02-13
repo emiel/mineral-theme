@@ -16,6 +16,7 @@ body {
   /* mobile */
   display: flex;
   flex-direction: column;
+  min-height: 100vh; /* for sticky footer */
 
   margin: 0;
   padding: 0em 1em;
@@ -49,6 +50,7 @@ body {
 /* Site content */
 
 .site-content {
+  flex: 1 1 auto; /* sticky footer */
 }
 
 .site-content blockquote {
