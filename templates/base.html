@@ -1,14 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
 {% block htmlhead %}
-  <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-  {% block stylesheets %}
-  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}">
-  {% endblock stylesheets %}
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block stylesheets %}
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}">
+  {% endblock stylesheets %}
+  <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 {% endblock htmlhead %}
 </head>
 
