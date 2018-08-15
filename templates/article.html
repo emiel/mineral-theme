@@ -6,9 +6,6 @@
   {% if article.description %}
   <meta name="description" content="{{ article.description }}">
   {% endif %}
-  {%- for tag in article.tags %}
-  <meta name="tags" content="{{ tag }}">
-  {% endfor -%}
 {% endblock htmlhead %}
 
 {% block content %}
