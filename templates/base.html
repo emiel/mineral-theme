@@ -20,8 +20,8 @@
   <span class="subtitle">{{ SITESUBTITLE }}</span>
 {% endif %}
 
-  <nav class="site-nav">
-    <ul>
+  <nav>
+    <ol class="site-nav">
   {% for title, link in MENUITEMS %}
       <li><a href="{{ link }}">{{ title }}</a></li>
   {% endfor %}
@@ -39,7 +39,7 @@
   <!--
       <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default("archives.html") }}">Archives</a></li>
   -->
-    </ul>
+    </ol>
   </nav>
 </header>
 
@@ -54,7 +54,7 @@
     <li><a href="{{ link_url }}">{{ link_name }}</a></li>
   {% endfor %}
   </ul>
-  <p class="copyright">&copy; 2017 Emiel van de Laar</p>
+  <p class="copyright">&copy; 2019 Emiel van de Laar</p>
 {% endblock %}
 </footer>
 
