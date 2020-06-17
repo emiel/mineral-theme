@@ -3,6 +3,9 @@
 
 {% block htmlhead %}
   {{ super() }}
+  {% for author in article.authors %}
+  <meta name="author" content="{{ author }}">
+  {% endfor %}
   {% if article.description %}
   <meta name="description" content="{{ article.description }}">
   {% endif %}

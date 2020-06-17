@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
-{% block htmlhead %}
+{% block htmlhead -%}
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,9 +36,6 @@
       {% endfor %}
     {% endif %}
   {% endif %}
-  <!--
-      <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default("archives.html") }}">Archives</a></li>
-  -->
     </ol>
   </nav>
 </header>
