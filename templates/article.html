@@ -6,8 +6,8 @@
   {% for author in article.authors %}
   <meta name="author" content="{{ author }}">
   {% endfor %}
-  {% if article.description %}
-  <meta name="description" content="{{ article.description }}">
+  {% if article.summary %}
+  <meta name="description" content="{{ article.summary|striptags|escape }}">
   {% endif %}
 {% endblock htmlhead %}
 
