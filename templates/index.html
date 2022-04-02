@@ -1,14 +1,22 @@
 {% extends "base.html" %}
 
-{% block content %}
-<h2>Latest writing</h2>
+{% block htmlhead %}
+  {{ super() }}
+  <meta name="description" content="{{ SITESUBTITLE|striptags|escape }}">
+{% endblock htmlhead %}
 
-<!-- limit to 4/5 articles -->
+{% block content %}
+<h2>All Articles</h2>
+
 {% for article in articles_page.object_list %}
   <article>
     <header>
       <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
-      <time class="article-date" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+      <small>
+        <em>
+        Posted on <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+        </em>
+      </small>
     </header>
 
     <div class="excerpt">

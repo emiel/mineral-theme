@@ -14,8 +14,12 @@
 {% block content %}
   <article>
     <header>
-      <h2 class="article-title">{{ article.title }}</h2>
-      <time class="article-date" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+      <h2>{{ article.title }}</h2>
+      <small>
+        <em>
+        Posted on <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+        </em>
+      </small>
     </header>
 
     <div class="article-content">
