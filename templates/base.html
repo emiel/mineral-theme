@@ -49,7 +49,7 @@
 {% block footer %}
   <ul>
   {% for link_name, link_url in SOCIAL %}
-    <li><a href="{{ link_url }}">{{ link_name }}</a></li>
+    <li><a href="{{ link_url }}" ref="me">{{ link_name }}</a></li>
   {% endfor %}
   </ul>
   <p class="copyright">&copy; {{ COPYRIGHT_YEAR }} {{ AUTHOR }}</p>
