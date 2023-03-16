@@ -4,10 +4,12 @@
 
 html {
   font-size: 100%; /* 16px (browser default, root for rem units) */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: "Merriweather", Georgia, serif;
+  font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
   line-height: 1.6;
   overflow-wrap: break-word;
 }
@@ -35,7 +37,7 @@ body {
 
 .site-header h1,
 h2 {
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
   margin-top: 0.5em;
   margin-bottom: 0;
 }
@@ -67,7 +69,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
   margin-top: 1em;
   margin-bottom: 0;
 }
