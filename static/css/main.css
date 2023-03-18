@@ -3,7 +3,7 @@
 }
 
 html {
-  font-size: 100%; /* 16px (browser default, root for rem units) */
+  font-size: 100%; /* 16px (browser default, root element for rem units) */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,7 +23,7 @@ body {
   min-height: 100vh; /* for sticky footer */
 
   margin: 0;
-  padding: 0 1em;
+  padding: 0 1em 0.25em;
 }
 
 @media screen and (min-width: 640px) {
@@ -85,10 +85,8 @@ h6 {
 
 /* Article */
 
-.article-content {
-}
-
-.article-dateline {
+article {
+  font-size: 1.125rem;
 }
 
 /* Wrapping */
@@ -97,6 +95,7 @@ h6 {
   background-color: hsl(24, 100%, 97.1%);
   overflow: auto;
   padding: 0.3em 0.1em;
+  font-size: 1.0rem;
 }
 
 /* Site footer */
