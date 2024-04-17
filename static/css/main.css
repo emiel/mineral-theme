@@ -4,8 +4,6 @@
 
 html {
   font-size: 100%; /* 16px (browser default, root element for rem units) */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
