@@ -20,36 +20,34 @@
   <span class="subtitle">{{ SITESUBTITLE }}</span>
 {% endif %}
 
-  <nav>
-    <ol class="site-nav">
+  <nav class="top-nav">
   {% for title, link in MENUITEMS %}
-      <li><a href="{{ link }}">{{ title }}</a></li>
+      <a href="{{ link }}">{{ title }}</a>
   {% endfor %}
   {% if DISPLAY_PAGES_ON_MENU %}
     {% for p in pages %}
-      <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+      <a class="{% if p == page %}active{% endif %}" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
     {% endfor %}
   {% endif %}
   {% if DISPLAY_CATEGORIES_ON_MENU %}
     {% for cat, null in categories %}
-      <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+    <a class="{% if cat == category %}active{% endif %}" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>
     {% endfor %}
   {% endif %}
-    </ol>
   </nav>
 </header>
 
-<div class="site-content">
+<main class="site-content">
 {% block content %}{% endblock %}
-</div>
+</main>
 
 <footer class="site-footer">
 {% block footer %}
-  <ul>
+<nav>
   {% for link_name, link_url in SOCIAL %}
-    <li><a href="{{ link_url }}" ref="me">{{ link_name }}</a></li>
+    <a href="{{ link_url }}" ref="me">{{ link_name }}</a>
   {% endfor %}
-  </ul>
+  </nav>
   <p class="copyright">&copy; {{ COPYRIGHT_YEAR }} {{ AUTHOR }}</p>
 {% endblock %}
 </footer>

@@ -2,12 +2,12 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 100%; /* 16px (browser default, root element for rem units) */
-}
-
 body {
-  font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+  background-color: rgb(253, 251, 250);
+  color: hsl(240, 14.29%, 13.73%);
+  font-family: "Iowan Old Style", "Palatino", "Palatino Linotype",
+    "Palatino LT STD", "Book Antiqua", "Georgia", "serif";
+  font-weight: 400;
   line-height: 1.6;
   overflow-wrap: break-word;
 }
@@ -21,64 +21,48 @@ body {
   min-height: 100vh; /* for sticky footer */
 
   margin: 0;
-  padding: 0 1em 0.25em;
+  padding: 0 1rem 0.25rem;
 }
 
 @media screen and (min-width: 640px) {
   .site-container {
-    max-width: 50em;
+    max-width: 50rem; /* 800px */
     margin: 0 auto;
   }
 }
 
 /* Site header */
 
-.site-header h1,
-h2 {
-  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
-  margin-top: 0.5em;
-  margin-bottom: 0;
-}
+.site-header {
+  & h1 {
+    font-family: "Bahnschrift", "DIN Alternate", "Franklin Gothic Medium",
+      "Nimbus Sans Narrow", "sans-serif-condensed", "sans-serif";
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
 
-/* Site navigation */
-
-.site-nav {
-  margin: 0;
-  padding: 0;
-}
-
-.site-nav li {
-  display: inline-block;
+  /* Site navigation */
+  & .top-nav {
+    display: flex;
+    column-gap: 0.4rem;
+  }
 }
 
 /* Site content */
 
 .site-content {
   flex: 1 1 auto; /* sticky footer */
-}
 
-.site-content blockquote {
-  font-style: oblique;
-}
+  & :is(h1, h2, h3, h4, h5, h6) {
+    font-family: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium",
+      "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
 
-.site-content h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
-  margin-top: 1em;
-  margin-bottom: 0;
-}
-
-.site-content h1 + p,
-.site-content h2 + p,
-.site-content h3 + p,
-.site-content h4 + p,
-.site-content h5 + p,
-.site-content h6 + p {
-  margin-top: 0.2em;
+  & blockquote {
+    font-style: oblique;
+  }
 }
 
 /* Article */
@@ -93,31 +77,26 @@ article {
   background-color: hsl(24, 100%, 97.1%);
   overflow: auto;
   padding: 0.3em 0.1em;
-  font-size: 1.0rem;
+  font-size: 1rem;
 }
 
 /* Site footer */
 
 .site-footer {
-  margin: 0 auto;
-}
+  & nav {
+    display: flex;
+    justify-content: center;
+    column-gap: 0.4rem;
 
-.site-footer ul {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
+    &:not(:first-child):before {
+      content: "◊";
+      padding-right: 0.3rem;
+    }
+  }
 
-.site-footer li {
-  display: inline-block;
-}
-
-.site-footer li:not(:first-child):before {
-  content: "◊";
-  padding-right: 0.3em;
-}
-
-.site-footer .copyright {
-  padding: 0.5em;
-  margin: 0;
+  & .copyright {
+    text-align: center;
+    margin: 0;
+    padding: 0.5rem;
+  }
 }
