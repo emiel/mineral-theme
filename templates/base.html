@@ -8,7 +8,7 @@
   {% block stylesheets %}
   <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}">
   {% endblock stylesheets %}
-  <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+  <title>{% block title %}{{ SITENAME|striptags }}{% endblock %}</title>
 {% endblock htmlhead %}
 </head>
 

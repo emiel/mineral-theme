@@ -1,8 +1,9 @@
 {% extends "base.html" %}
+{% block title %}Latest | {{ SITENAME|striptags }}{% endblock %}
 
 {% block htmlhead %}
   {{ super() }}
-  <meta name="description" content="{{ SITESUBTITLE|striptags|escape }}">
+  <meta name="description" content="A blog by {{ AUTHOR }}">
 {% endblock htmlhead %}
 
 {% block content %}
